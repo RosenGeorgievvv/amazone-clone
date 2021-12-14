@@ -1,10 +1,15 @@
 
 import './App.css';
+import Header from './Header';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Programmers, let's build the amazone store :rock </h1>
+    <div className="app">
+      <h1> </h1>
+
+      <Header />
     </div>
   );
 }
