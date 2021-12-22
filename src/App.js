@@ -3,15 +3,16 @@ import './App.css';
 import Header from './Header';
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Checkout from './Checkout';
 
 function App() {
   return (
     <Router>
       <div className="app">
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/header" element={<Header />} />
-          <Route exact path="/checkout" element={<><Header /><h1>This is a checkout, which is about to appear soon!</h1></>} />
+          <Route exact path="/checkout" element={<Checkout />} />
 
         </Routes>
       </div>
