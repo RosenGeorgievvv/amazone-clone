@@ -1,11 +1,20 @@
-/* eslint-disable no-template-curly-in-string */
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDcm77FYKd_9CHdzPHhEAfb3pSpV2k_huo",
-    authDomain: "e-clone-5b08a.firebaseapp.com",
-    projectId: "e-clone-5b08a",
-    storageBucket: "e-clone-5b08a.appspot.com",
-    messagingSenderId: "87680833434",
-    appId: "1:87680833434:web:2bdb87f642d5ab901f0c23",
-    measurementId: "${config.measurementId}"
+    apiKey: "AIzaSyDHfWOCmvTszwk8jxnv5lkjkUiFuBZOuOg",
+    authDomain: "clone-83491.firebaseapp.com",
+    projectId: "clone-83491",
+    storageBucket: "clone-83491.appspot.com",
+    messagingSenderId: "620515295598",
+    appId: "1:620515295598:web:a3f33f0c20b776fba2417f",
+    measurementId: "G-L42GPRFPFG"
 };
+
+
+const firebaseapp = firebase.initializeApp(firebaseConfig);
+const db = firebaseapp.firestore();
+const auth = firebase.auth();
+
+export { db, auth }
