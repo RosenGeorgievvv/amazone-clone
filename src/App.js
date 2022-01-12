@@ -6,8 +6,10 @@ import Checkout from './Checkout';
 import Login from './Login'
 import { useEffect } from 'react';
 import { auth } from './firebase';
+import { useStateValue } from './StateProvider'
 
 function App() {
+  const [{ }, dispatch] = useStateValue()
 
   useEffect(() => {
 
@@ -19,8 +21,16 @@ function App() {
       if (authUser) {
         // the user just logged in / the user was logged in
 
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
       } else {
         // the user is logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
       }
     })
   }, [])
