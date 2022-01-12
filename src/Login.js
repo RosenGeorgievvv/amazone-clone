@@ -13,6 +13,7 @@ function Login() {
     const signIn = e => {
         e.preventDefault()
 
+        // succesfully able to login after user has being registered
         auth.signInWithEmailAndPassword(email, password).then(auth => {
             navigate('/')
         })
