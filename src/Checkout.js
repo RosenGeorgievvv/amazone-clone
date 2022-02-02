@@ -1,11 +1,13 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import './Checkout.css'
 import Subtotal from './Subtotal'
 import { useStateValue } from './StateProvider'
 import CheckoutProduct from './CheckoutProduct'
 
 
+
 function Checkout() {
+    // eslint-disable-next-line no-unused-vars
     const [{ basket, user }, dispatch] = useStateValue();
 
     return (

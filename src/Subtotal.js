@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Subtotal() {
     const navigate = useNavigate();
+    // eslint-disable-next-line no-unused-vars
     const [{ basket }, dispatch] = useStateValue();
 
     return (

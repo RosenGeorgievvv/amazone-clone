@@ -9,6 +9,7 @@ import { auth } from './firebase';
 
 function Header() {
 
+    // eslint-disable-next-line no-unused-vars
     const [{ basket, user }, dispatch] = useStateValue();
 
     const handleAuthentication = () => {
@@ -40,10 +41,12 @@ function Header() {
                     </div>
                 </Link>
 
-                <div className="header_option">
-                    <span className="header_optionLineOne">Returns</span>
-                    <span className="header_optionLineTwo">& Orderds</span>
-                </div>
+                <Link to='/orders'>
+                    <div className="header_option">
+                        <span className="header_optionLineOne">Returns</span>
+                        <span className="header_optionLineTwo">& Orderds</span>
+                    </div>
+                </Link>
 
                 <div className="header_option">
                     <span className="header_optionLineOne">Your</span>

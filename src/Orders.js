@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { db } from './firebase';
 import './Orders.css';
 import { useStateValue } from './StateProvider';
+import Order from './Order';
 
 function Orders() {
+    // eslint-disable-next-line no-unused-vars
     const [{ basket, user }, dispatch] = useStateValue();
     const [orders, setOrders] = useState([])
 
@@ -24,6 +26,12 @@ function Orders() {
     return (
         <div className='orders'>
             <h1>Your Orders</h1>
+
+            <div className='orders_order'>
+                {orders?.map(order => (
+                    <Order order={order} />
+                ))}
+            </div>
         </div>
     )
 }

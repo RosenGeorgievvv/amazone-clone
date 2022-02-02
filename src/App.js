@@ -15,6 +15,7 @@ import { Elements } from '@stripe/react-stripe-js';
 const promise = loadStripe('pk_test_51KK2q2H0i7873LQ7XQsVYTSSHYD4luw2QyWaRYYP8XntUOIJeXNXd2ItFVy9Q9wFMBYjbBPrRK1Cq8xYA6mPU71Y00j610GlKi')
 
 function App() {
+  // eslint-disable-next-line no-empty-pattern
   const [{ }, dispatch] = useStateValue()
 
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
         })
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <Router>
