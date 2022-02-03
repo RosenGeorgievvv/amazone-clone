@@ -24,7 +24,7 @@ function Orders() {
     }, [user])
 
     return (
-        <div className='orders'>
+        <div className='orders' key={'orders'}>
             <h1>Your Orders</h1>
 
             <div className='orders_order'>
